@@ -1,0 +1,14 @@
+name: confirmation sample
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: confirmation sample
+        required: true
+        type: boolean
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
