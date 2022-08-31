@@ -11,4 +11,6 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - run: exit 1
+      if: ${{ ! inputs.confirmation }}
+    - run: echo 'finished'
